@@ -107,6 +107,7 @@ abstract class JMailHelper
 	 */
 	public static function isEmailAddress($email)
 	{
+<<<<<<< HEAD
 		// Split the email into a local and domain
 		$atIndex = strrpos($email, "@");
 		$domain = substr($email, $atIndex + 1);
@@ -178,5 +179,8 @@ abstract class JMailHelper
 		}
 
 		return true;
+=======
+		return (boolean) filter_var($email, FILTER_VALIDATE_EMAIL);
+>>>>>>> 10ea69dece20f9ef1fe57f8584f2cd8e7c17ac7f
 	}
 }
